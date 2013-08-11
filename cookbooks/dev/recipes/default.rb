@@ -11,8 +11,9 @@ package 'libx11-dev'
 package 'libxpm-dev'
 package 'libxt-dev'
 
-# compile vim from source
-unless `ruby --version | grep +ruby` == ""
+# compile vim from source (I'm sure there is a chef-ier way to do this but...)
+vim_test_output = `vim --version | grep +ruby`
+unless vim_test_output.include?('+ruby')
   `wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2`
   `tar -xjvf vim-7.3.tar.bz2`
   `cd vim73 && ./configure --prefix=/usr/local \
