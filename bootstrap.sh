@@ -1,8 +1,8 @@
 #!/bin/bash
 # heavily cribbed from http://www.opinionatedprogrammer.com/2011/06/chef-solo-tutorial-managing-a-single-server-with-chef/
-
 # this should be run on the machine you are imaging
-chef_binary=/var/lib/gems/1.9.1/bin/chef-solo
+
+chef_binary=/usr/local/bin/chef-solo
 
 # clear sudo credentials
 sudo -K
