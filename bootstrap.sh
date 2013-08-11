@@ -20,4 +20,4 @@ if ! test -f "$chef_binary"; then
   sudo gem install --no-rdoc --no-ri chef
 fi &&
 
-"$chef_binary" -c solo.rb -j solo.json
+sudo "$chef_binary" -c solo.rb -j solo.json
