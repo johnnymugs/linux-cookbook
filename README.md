@@ -8,5 +8,5 @@ This repo automates getting a fresh install of linux up and ready for developmen
 - Begin with a fresh install of Debian/whatever.
 - You are a sudoer.
 - Install git: `sudo aptitude install build-essential git`
-- Clone this repo: `git clone git@github.com:johnnymugs/linux-cookbook.git`
-- Let this script run its magic: `cd linux-cookbook && bootstrap.sh`
+- Clone this repo: `git clone http://github.com/johnnymugs/linux-cookbook.git`
+- Let this script run its magic: `cd linux-cookbook && ./bootstrap.sh`
