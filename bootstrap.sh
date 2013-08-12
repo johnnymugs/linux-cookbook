@@ -1,23 +1,27 @@
 #!/bin/bash
-# heavily cribbed from http://www.opinionatedprogrammer.com/2011/06/chef-solo-tutorial-managing-a-single-server-with-chef/
-# this should be run on the machine you are imaging
-
-chef_binary=/usr/local/bin/chef-solo
 
 # clear sudo credentials
 sudo -K
 
-# Are we on a vanilla system?
-if ! test -f "$chef_binary"; then
-  echo "Installing Ruby and Chef. You will likely be prompted for a sudo password."
-  export DEBIAN_FRONTEND=noninteractive
-  # Upgrade headlessly (this is only safe-ish on vanilla systems)
-  sudo aptitude update &&
-  sudo apt-get -o Dpkg::Options::="--force-confnew" \
-    --force-yes -fuy dist-upgrade &&
-  # Install Ruby and Chef
-  sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make
-  sudo gem install --no-rdoc --no-ri chef
-fi &&
+# install boatload of packages we know we need
+sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-dev \
+  libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev \
+  libxt-dev
 
-sudo "$chef_binary" -c solo.rb -j solo.json
+if vim --version | grep -q '+ruby'
+  echo Sweet, vim already installed and compiled with Ruby support.
+else
+  echo Compiling vim with Ruby support...
+  wget ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
+  tar -xjvf vim-7.3.tar.bz2
+  cd vim73 && ./configure --prefix=/usr/local \
+      --enable-gui=no \
+      --without-x \
+      --disable-nls \
+      --with-tlib=ncurses \
+      --enable-multibyte \
+      --enable-rubyinterp \
+      --with-features=huge \
+      --enable-gui=gnome2 && \
+  make && sudo make install
+fi

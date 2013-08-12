@@ -10,3 +10,38 @@ This repo automates getting a fresh install of linux up and ready for developmen
 - Install git: `sudo aptitude install build-essential git`
 - Clone this repo: `git clone http://github.com/johnnymugs/linux-cookbook.git`
 - Let this script run its magic: `cd linux-cookbook && ./bootstrap.sh`
+
+### TODO
+
+#### vim
+- compile vim with ruby support
+- get vim config
+- make commandT
+
+#### rubystuff
+- latest ruby version
+- build-ruby
+- chruby
+
+#### postgres
+- postgres
+- postgres user config
+
+#### external programs
+- heroku cli
+- git aliases
+- rspec --color
+
+#### packages
+- redis
+- imagemagick
+- gvim
+- sl
+
+#### ??? nice to have
+- leiningen
+- java
+- clojure?
+- chrome?
+- dwm?
+- iceaweasel java thang
