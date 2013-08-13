@@ -6,7 +6,7 @@ sudo -K
 # store current directory
 cwd=$(pwd)
 
-# install boatload of packages we know we need
+echo Installing necessary packages...
 sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-dev \
   libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev \
   libxt-dev postgresql postgresql-contrib redis-server imagemagick gvim sl \
@@ -31,33 +31,33 @@ else
   make && sudo make install
 fi
 
-# set up vim config
+echo Cloning vim config...
 git clone git@github.com:johnnymugs/vim-config.git ~/.vim
 cd ~/.vim
 git submodule update --init
 ln -s ~/.vim/vimrc ~/.vimrc
 
-# compile command-t plugin for vim
+echo Compiling Command-T for vim...
 cd ~/.vim/bundle/command-t
 bundle
 rake make
 
-# get heroku cli app
+echo Getting the heroku-cli app...
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-# copy rspec config
+echo Adding rspec config...
 cp $cwd/dotfiles/rspec ~/.rspec
 
-# git config
+echo Adding gitconfig...
 cp $cwd/dotfiles/gitconfig ~/.gitconfig
 
-# get google chrome
+echo Installing Google Chrome...
 cd $cwd
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-*.deb
 sudo apt-get install -f
 
-# get ruby 2.0
+echo Installing Ruby 2.0...
 cd $cwd
 wget http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz
 tar -xzvf ruby-2.0.0-p247.tar.gz
@@ -66,7 +66,7 @@ cd ruby-2.0.0-p247
 make
 sudo make install
 
-# install chruby
+echo Installing chruby...
 cd $cwd
 wget -O chruby-0.3.6.tar.gz https://github.com/postmodern/chruby/archive/v0.3.6.tar.gz
 tar -xzvf chruby-0.3.6.tar.gz
