@@ -63,3 +63,6 @@ echo local all postgres peer
 echo to
 echo local all postgres trust
 echo ONLY FOR DEV MACHINES, NOT PROD OBVI
+
+# return to where we started
+cd $cdw
