@@ -36,3 +36,6 @@ ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim/bundle/command-t
 bundle
 rake make
+
+# get heroku cli app
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh

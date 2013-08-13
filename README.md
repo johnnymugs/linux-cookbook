@@ -26,7 +26,6 @@ liking.
 - postgres user config
 
 #### external programs
-- heroku cli
 - git aliases
 - rspec --color
 
