@@ -10,7 +10,8 @@ cwd=$(pwd)
 sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-dev \
   libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev \
   libxt-dev postgresql postgresql-contrib redis-server imagemagick gvim sl \
-  icedtea-7-plugin gnome-do
+  icedtea-7-plugin gnome-do libffi-dev libgdbm-dev libncurses5-dev libreadline-dev \
+  libssl-dev libyaml-dev zlib1g-dev
 
 if vim --version | grep -q '+ruby'
   echo Sweet, vim already installed and compiled with Ruby support.
@@ -51,9 +52,26 @@ cp $cwd/dotfiles/rspec ~/.rspec
 cp $cwd/dotfiles/gitconfig ~/.gitconfig
 
 # get google chrome
+cd $cwd
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-*.deb
 sudo apt-get install -f
+
+# get ruby 2.0
+cd $cwd
+wget http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz
+tar -xzvf ruby-2.0.0-p247.tar.gz
+cd ruby-2.0.0-p247
+./configure --prefix=/opt/rubies/ruby-2.0.0-p247
+make
+sudo make install
+
+# install chruby
+cd $cwd
+wget -O chruby-0.3.6.tar.gz https://github.com/postmodern/chruby/archive/v0.3.6.tar.gz
+tar -xzvf chruby-0.3.6.tar.gz
+cd chruby-0.3.6/
+sudo make install
 
 # set up postgres... on second thought this could be kinda dangerous, just
 # provide instructions
