@@ -27,7 +27,6 @@ liking.
 
 #### external programs
 - git aliases
-- rspec --color
 
 #### ??? nice to have
 - leiningen

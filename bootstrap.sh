@@ -3,6 +3,9 @@
 # clear sudo credentials
 sudo -K
 
+# store current directory
+cwd=$(pwd)
+
 # install boatload of packages we know we need
 sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-dev \
   libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev \
@@ -39,3 +42,6 @@ rake make
 
 # get heroku cli app
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# copy rspec config
+cp $cwd/dotfiles/rspec ~/.rspec
