@@ -13,7 +13,7 @@ liking.
 - Make yourself sudoer if you're not already.
 - Install git: `sudo aptitude install build-essential git`
 - Clone this repo: `git clone http://github.com/johnnymugs/linux-cookbook.git`
-- Let this script run its magic: `cd linux-cookbook && ./bootstrap.sh`
+- Let this script run its magic: `./linux-cookbook/bootstrap.sh`
 
 ### TODO
 
