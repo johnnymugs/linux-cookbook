@@ -16,11 +16,6 @@ liking.
 
 ### TODO
 
-#### vim
-- compile vim with ruby support
-- get vim config
-- make commandT
-
 #### rubystuff
 - latest ruby version
 - build-ruby

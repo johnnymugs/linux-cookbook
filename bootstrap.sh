@@ -25,3 +25,14 @@ else
       --enable-gui=gnome2 && \
   make && sudo make install
 fi
+
+# set up vim config
+git clone git@github.com:johnnymugs/vim-config.git ~/.vim
+cd ~/.vim
+git submodule update --init
+ln -s ~/.vim/vimrc ~/.vimrc
+
+# compile command-t plugin for vim
+cd ~/.vim/bundle/command-t
+bundle
+rake make
