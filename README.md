@@ -24,6 +24,3 @@ liking.
 
 #### postgres
 - postgres user config
-
-#### ??? nice to have
-- dwm?
