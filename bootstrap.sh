@@ -11,7 +11,8 @@ sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-d
   libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev \
   libxt-dev postgresql postgresql-contrib redis-server imagemagick gvim sl \
   icedtea-7-plugin gnome-do libffi-dev libgdbm-dev libncurses5-dev libreadline-dev \
-  libssl-dev libyaml-dev zlib1g-dev ttf-ancient-fonts libqtwebkit-dev libpq-dev
+  libssl-dev libyaml-dev zlib1g-dev ttf-ancient-fonts libqtwebkit-dev libpq-dev \
+  ack-grep
 
 if vim --version | grep -q '+ruby'
 then
@@ -58,6 +59,9 @@ cd $cwd
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-*.deb
 sudo apt-get install -f
+
+echo Renaming ack-grep to ack
+sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
 
 echo Installing Ruby 2.0...
 cd $cwd
