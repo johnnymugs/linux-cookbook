@@ -45,3 +45,6 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 # copy rspec config
 cp $cwd/dotfiles/rspec ~/.rspec
+
+# git config
+cp $cwd/dotfiles/gitconfig ~/.gitconfig

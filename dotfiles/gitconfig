@@ -1,0 +1,21 @@
+[alias]
+  st = status
+  di = diff
+  co = checkout
+  ci = commit
+  br = branch
+  sta = stash
+  llog = log
+[apply]
+  whitespace = nowarn
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+[branch]
+  autosetupmerge = true
+[user]
+  name = Jonathan Mukai-Heidt
+  email = johnnymukai@gmail.com

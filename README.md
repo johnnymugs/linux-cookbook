@@ -25,9 +25,6 @@ liking.
 #### postgres
 - postgres user config
 
-#### external programs
-- git aliases
-
 #### ??? nice to have
 - leiningen
 - java
