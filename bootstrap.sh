@@ -33,7 +33,7 @@ else
 fi
 
 echo Cloning vim config...
-git clone git@github.com:johnnymugs/vim-config.git ~/.vim
+git clone http://github.com/johnnymugs/vim-config.git ~/.vim
 cd ~/.vim
 git submodule update --init
 ln -s ~/.vim/vimrc ~/.vimrc
