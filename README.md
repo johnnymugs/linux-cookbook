@@ -21,6 +21,3 @@ liking.
 - latest ruby version
 - build-ruby
 - chruby
-
-#### postgres
-- postgres user config

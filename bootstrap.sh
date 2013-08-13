@@ -54,3 +54,12 @@ cp $cwd/dotfiles/gitconfig ~/.gitconfig
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-*.deb
 sudo apt-get install -f
+
+# set up postgres... on second thought this could be kinda dangerous, just
+# provide instructions
+echo All done. Now go change /etc/postgresql/9.1/main/pg_hba.conf
+echo Edit the line that reads...
+echo local all postgres peer
+echo to
+echo local all postgres trust
+echo ONLY FOR DEV MACHINES, NOT PROD OBVI
