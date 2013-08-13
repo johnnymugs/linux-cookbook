@@ -8,9 +8,12 @@ should always get me/you from a fresh install to a dev machine set up to my
 liking.
 
 ### Steps:
-
 - Begin with a fresh install of Debian/whatever.
 - Make yourself sudoer if you're not already.
 - Install git: `sudo aptitude install build-essential git`
 - Clone this repo: `git clone http://github.com/johnnymugs/linux-cookbook.git`
 - Let this script run its magic: `./linux-cookbook/bootstrap.sh`
+
+### Wishlist
+- Be smarter/more tolerant of failure (don't install stuff that's already
+installed -- should be able to run the script twice without issue)
