@@ -30,12 +30,6 @@ liking.
 - git aliases
 - rspec --color
 
-#### packages
-- redis
-- imagemagick
-- gvim
-- sl
-
 #### ??? nice to have
 - leiningen
 - java
