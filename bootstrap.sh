@@ -39,6 +39,7 @@ git submodule update --init
 ln -s ~/.vim/vimrc ~/.vimrc
 
 echo Compiling Command-T for vim...
+sudo gem install bundler
 cd ~/.vim/bundle/command-t
 bundle
 rake make
