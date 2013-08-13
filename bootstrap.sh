@@ -73,14 +73,23 @@ tar -xzvf chruby-0.3.6.tar.gz
 cd chruby-0.3.6/
 sudo make install
 
+# final instructions
+echo Be sure to add this to your .bash_profile or .bashrc
+echo source /usr/local/share/chruby/chruby.sh
+echo source /usr/local/share/chruby/auto.sh
+echo
+
 # set up postgres... on second thought this could be kinda dangerous, just
 # provide instructions
-echo All done. Now go change /etc/postgresql/9.1/main/pg_hba.conf
+echo Now go change /etc/postgresql/9.1/main/pg_hba.conf
 echo Edit the line that reads...
 echo local all postgres peer
 echo to
 echo local all postgres trust
 echo ONLY FOR DEV MACHINES, NOT PROD OBVI
+
+echo
+echo All done!
 
 # return to where we started
 cd $cdw
