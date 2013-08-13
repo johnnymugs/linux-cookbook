@@ -1,4 +1,5 @@
-linux-cookbook ==============
+linux-cookbook
+==============
 
 This repo automates getting a fresh install of linux up and ready for
 development the way I like it. I keep it here so I never have to remember what
