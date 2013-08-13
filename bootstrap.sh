@@ -14,6 +14,7 @@ sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-d
   libssl-dev libyaml-dev zlib1g-dev ttf-ancient-fonts
 
 if vim --version | grep -q '+ruby'
+then
   echo Sweet, vim already installed and compiled with Ruby support.
 else
   echo Compiling vim with Ruby support...
