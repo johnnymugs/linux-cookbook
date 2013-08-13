@@ -26,5 +26,4 @@ liking.
 - postgres user config
 
 #### ??? nice to have
-- chrome?
 - dwm?
