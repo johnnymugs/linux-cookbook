@@ -17,3 +17,4 @@ liking.
 ### Wishlist
 - Be smarter/more tolerant of failure (don't install stuff that's already
 installed -- should be able to run the script twice without issue)
+- Run without prompting the user after first sudo
