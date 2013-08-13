@@ -11,7 +11,7 @@ sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-d
   libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev \
   libxt-dev postgresql postgresql-contrib redis-server imagemagick gvim sl \
   icedtea-7-plugin gnome-do libffi-dev libgdbm-dev libncurses5-dev libreadline-dev \
-  libssl-dev libyaml-dev zlib1g-dev
+  libssl-dev libyaml-dev zlib1g-dev ttf-ancient-fonts
 
 if vim --version | grep -q '+ruby'
   echo Sweet, vim already installed and compiled with Ruby support.
