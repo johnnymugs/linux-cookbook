@@ -26,7 +26,5 @@ liking.
 - postgres user config
 
 #### ??? nice to have
-- java
 - chrome?
 - dwm?
-- iceaweasel java thang
