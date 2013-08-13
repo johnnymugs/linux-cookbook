@@ -23,7 +23,6 @@ liking.
 - chruby
 
 #### postgres
-- postgres
 - postgres user config
 
 #### external programs
