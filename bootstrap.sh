@@ -93,7 +93,7 @@ echo local all postgres peer
 echo to
 echo local all postgres trust
 echo ONLY FOR DEV MACHINES, NOT PROD OBVI
-echo (and restart postgres afterwards)
+echo and restart postgres afterwards
 
 echo
 echo All done!
