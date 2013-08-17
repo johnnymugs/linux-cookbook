@@ -58,7 +58,7 @@ echo Installing Google Chrome...
 cd $cwd
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-*.deb
-sudo apt-get install -f
+sudo apt-get install -f -y
 
 echo Renaming ack-grep to ack
 sudo dpkg-divert --local --divert /usr/bin/ack --rename --add /usr/bin/ack-grep
