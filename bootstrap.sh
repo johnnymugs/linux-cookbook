@@ -12,7 +12,7 @@ sudo aptitude install -y ruby1.9.1 ruby1.9.1-dev make libncurses-dev libgnome2-d
   libxt-dev postgresql postgresql-contrib redis-server imagemagick gvim sl \
   icedtea-7-plugin gnome-do libffi-dev libgdbm-dev libncurses5-dev libreadline-dev \
   libssl-dev libyaml-dev zlib1g-dev ttf-ancient-fonts libqtwebkit-dev libpq-dev \
-  ack-grep libmagickwand-dev
+  ack-grep libmagickwand-dev vlc
 
 if vim --version | grep -q '+ruby'
 then
