@@ -19,3 +19,6 @@ liking.
 installed -- should be able to run the script twice without issue)
 - Run without prompting the user after first sudo
 - Bind leader-f to cmd-t in vim
+
+### TODO
+- Add deb-multimedia sources
